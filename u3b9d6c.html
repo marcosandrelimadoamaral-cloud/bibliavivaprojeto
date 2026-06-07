@@ -3,12 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🚨 Oferta Especial — Última Chamada</title>
+    <title>🚨 Oferta Exclusiva — Plano Devocional 7 Dias</title>
     
     <!-- Favicon -->
     <link rel="icon" href="images/favicon-copiar-150x150.webp" sizes="32x32">
     <link rel="icon" href="images/favicon-copiar-300x300.webp" sizes="192x192">
     <link rel="apple-touch-icon" href="images/favicon-copiar-300x300.webp">
+    
+    <!-- Back Redirect -->
+    <script>
+        (function() {
+            history.pushState(null, null, location.href);
+            window.addEventListener('popstate', function() {
+                window.location.replace('w5v8x2y.html');
+            });
+        })();
+    </script>
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -67,7 +77,7 @@
         }
         .top-bar p {
             font-size: 0.9rem;
-            color: var(--ouro-claro);
+            color: var(--pergaminho-escuro);
             text-transform: uppercase;
             font-weight: 700;
         }
@@ -86,7 +96,7 @@
         }
         .hero h2 {
             font-family: 'Lora', serif;
-            font-size: 1.6rem;
+            font-size: 1.7rem;
             color: var(--branco);
             line-height: 1.4;
             margin-bottom: 20px;
@@ -101,7 +111,6 @@
             font-family: 'Lora', serif;
             max-width: 550px;
             margin: 0 auto;
-            line-height: 1.6;
         }
 
         /* ── QUOTE BOX ── */
@@ -112,23 +121,21 @@
             padding: 28px 24px;
             margin-bottom: 40px;
             position: relative;
-            text-align: center;
         }
         .quote-box h3 {
             font-family: 'Lora', serif;
             font-size: 1.35rem;
-            color: var(--ouro-claro);
+            color: var(--branco);
+            text-align: center;
             margin-bottom: 15px;
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+            font-weight: 600;
         }
         .quote-box p {
-            font-family: 'Lora', serif;
-            font-size: 1.1rem;
+            font-size: 0.98rem;
             color: var(--pergaminho-escuro);
             line-height: 1.6;
-            margin-bottom: 10px;
+            margin-bottom: 12px;
+            text-align: center;
         }
         .quote-box p:last-child {
             margin-bottom: 0;
@@ -140,11 +147,11 @@
             margin-bottom: 40px;
         }
         .intro-title {
-            font-size: 1.15rem;
+            font-size: 0.95rem;
             text-transform: uppercase;
             letter-spacing: 2px;
             color: var(--ouro);
-            margin-bottom: 20px;
+            margin-bottom: 10px;
             font-weight: 800;
         }
         .intro-product {
@@ -155,13 +162,14 @@
             font-weight: bold;
         }
         .intro-text {
-            font-size: 1rem;
-            color: #d1c7b7;
-            margin-bottom: 15px;
+            font-size: 1.1rem;
+            color: var(--pergaminho);
             line-height: 1.7;
+            max-width: 550px;
+            margin: 0 auto;
         }
 
-        /* ── MOCKUP AREA (Tablet mockup with Discount Overlay) ── */
+        /* ── MOCKUP AREA (Digital Cover Tablet) ── */
         .mockup-title {
             text-align: center;
             font-size: 0.95rem;
@@ -183,30 +191,6 @@
             position: relative;
             overflow: hidden;
         }
-        
-        /* Gold discount tag overlay */
-        .discount-badge {
-            position: absolute;
-            top: 15px;
-            right: 15px;
-            background: var(--ouro);
-            color: #000;
-            padding: 6px 12px;
-            font-size: 0.8rem;
-            font-weight: 900;
-            border-radius: 4px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-            z-index: 10;
-            animation: bounce 2s infinite;
-        }
-        
-        @keyframes bounce {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-5px); }
-        }
-
         .mockup-container::before {
             content: '';
             position: absolute;
@@ -287,17 +271,14 @@
         .benefits-section {
             margin-bottom: 45px;
         }
-        .benefits-title-box {
+        .benefits-title {
             text-align: center;
-            margin-bottom: 25px;
-        }
-        .benefits-label {
             font-size: 1.15rem;
             text-transform: uppercase;
             letter-spacing: 2px;
             color: var(--ouro);
+            margin-bottom: 25px;
             font-weight: 800;
-            margin-bottom: 6px;
         }
         .benefits-list {
             display: flex;
@@ -330,6 +311,42 @@
             font-weight: 600;
         }
 
+        /* ── PERFECT FOR SECTION ── */
+        .perfect-section {
+            background: rgba(196, 154, 40, 0.03);
+            border-radius: 8px;
+            border: 1px solid rgba(196, 154, 40, 0.08);
+            padding: 24px;
+            margin-bottom: 45px;
+        }
+        .perfect-title {
+            text-align: center;
+            font-size: 1.05rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--ouro);
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+        .perfect-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        .perfect-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            font-size: 0.98rem;
+            color: var(--pergaminho);
+        }
+        .perfect-check {
+            color: var(--ouro-claro);
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
         /* ── OFERTA EXCLUSIVA WARNING ── */
         .oferta-exclusiva {
             text-align: center;
@@ -348,33 +365,6 @@
             color: #d4af37;
             font-style: italic;
             font-family: 'Lora', serif;
-        }
-
-        /* ── WARNING BLOCK ── */
-        .warning-block {
-            background: rgba(139, 26, 26, 0.08);
-            border: 1px solid rgba(139, 26, 26, 0.3);
-            border-radius: 8px;
-            padding: 20px;
-            margin-bottom: 40px;
-            text-align: center;
-        }
-        .warning-block h4 {
-            color: #ff6666;
-            font-size: 1rem;
-            text-transform: uppercase;
-            margin-bottom: 8px;
-            letter-spacing: 1px;
-            font-weight: 700;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-        }
-        .warning-block p {
-            font-size: 0.95rem;
-            color: var(--pergaminho);
-            line-height: 1.5;
         }
 
         /* ── VALUE & PRICE SECTION ── */
@@ -500,34 +490,6 @@
             color: #bfaea2;
         }
 
-        /* ── GUARANTEE BADGE ── */
-        .guarantee-box {
-            display: flex;
-            align-items: center;
-            gap: 16px;
-            background: rgba(255, 255, 255, 0.02);
-            border: 1px solid rgba(255, 255, 255, 0.06);
-            border-radius: 8px;
-            padding: 20px;
-            margin-bottom: 45px;
-        }
-        .guarantee-icon {
-            font-size: 2.2rem;
-            color: #42a5f5;
-            line-height: 1;
-        }
-        .guarantee-text h5 {
-            font-size: 0.95rem;
-            color: var(--branco);
-            font-weight: bold;
-            margin-bottom: 4px;
-        }
-        .guarantee-text p {
-            font-size: 0.85rem;
-            color: #a19789;
-            line-height: 1.4;
-        }
-
         /* ── FOOTER ── */
         footer {
             text-align: center;
@@ -548,52 +510,47 @@
 
     <!-- ═══ TOP WARNING BAR ═══ -->
     <div class="top-bar">
-        <h1>UMA ÚLTIMA OPORTUNIDADE:</h1>
-        <p>Antes de encerrar, quero fazer algo especial para você.</p>
+        <h1>O PRÓXIMO PASSO É ESTE:</h1>
+        <p>Sua jornada espiritual está apenas começando.</p>
     </div>
 
     <div class="container">
 
         <!-- ═══ HERO SECTION ═══ -->
         <section class="hero">
-            <p class="hero-sub" style="margin-bottom: 15px;">Talvez este não seja o momento ideal para investir no Plano Devocional completo.</p>
-            <p class="hero-sub" style="margin-bottom: 30px;">E tudo bem.</p>
-            <h2>
-                Mas eu realmente acredito que estes próximos 7 dias podem fazer diferença na sua caminhada espiritual.<br>
-                <span>Por isso, decidi liberar uma condição especial antes que você saia desta página.</span>
-            </h2>
+            <p class="hero-sub">Porque conhecimento bíblico sem prática diária acaba sendo esquecido com o tempo.</p>
         </section>
 
         <!-- ═══ QUOTE BOX ═══ -->
         <div class="quote-box">
-            <h3>Última oportunidade</h3>
-            <p>O mesmo Plano Devocional 7 Dias.</p>
-            <p>Os mesmos áudios.</p>
-            <p>As mesmas reflexões.</p>
-            <p>Os mesmos exercícios espirituais.</p>
-            <p><strong>Mas com um valor reduzido disponível apenas agora.</strong></p>
+            <h3>Entender a Palavra é importante.</h3>
+            <p><strong>Mas viver a Palavra diariamente transforma vidas.</strong></p>
+            <p>Muitas pessoas compram materiais bíblicos. Estudam. Aprendem. Se inspiram.</p>
+            <p>Mas poucos conseguem manter uma rotina constante de crescimento espiritual.</p>
+            <p>A correria do dia a dia toma conta. Os compromissos aumentam. E a vida espiritual acaba ficando para depois.</p>
         </div>
 
         <!-- ═══ INTRODUCTION ═══ -->
         <section class="intro-section">
-            <h3 class="intro-title">Condição Especial</h3>
+            <h3 class="intro-title">É por isso que criamos o</h3>
             <div class="intro-product">🙏 Plano Devocional 7 Dias</div>
+            <p class="intro-text">
+                Uma experiência guiada para ajudar você a reservar alguns minutos por dia para fortalecer sua fé, renovar sua esperança e aprofundar sua conexão com Deus.
+            </p>
         </section>
 
 
 
         <!-- ═══ BENEFITS ═══ -->
         <section class="benefits-section">
-            <div class="benefits-title-box">
-                <h2 class="benefits-label">Você continuará recebendo:</h2>
-            </div>
-            
+            <h2 class="benefits-title">Durante 7 dias você receberá:</h2>
+
             <div class="benefits-list">
                 <!-- Benefit 1 -->
                 <div class="benefit-item">
                     <div class="benefit-icon">✅</div>
                     <div class="benefit-content">
-                        <p>Os 7 áudios guiados</p>
+                        <p>Áudios guiados de fortalecimento espiritual</p>
                     </div>
                 </div>
 
@@ -601,7 +558,7 @@
                 <div class="benefit-item">
                     <div class="benefit-icon">✅</div>
                     <div class="benefit-content">
-                        <p>Reflexões diárias</p>
+                        <p>Reflexões inspiradas nas Escrituras</p>
                     </div>
                 </div>
 
@@ -617,7 +574,7 @@
                 <div class="benefit-item">
                     <div class="benefit-icon">✅</div>
                     <div class="benefit-content">
-                        <p>Fortalecimento espiritual</p>
+                        <p>Exercícios simples de aplicação prática</p>
                     </div>
                 </div>
 
@@ -625,15 +582,43 @@
                 <div class="benefit-item">
                     <div class="benefit-icon">✅</div>
                     <div class="benefit-content">
-                        <p>Aplicação prática da Palavra</p>
+                        <p>Mensagens de fé e esperança para o seu dia</p>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- ═══ PERFECT FOR ═══ -->
+        <section class="perfect-section">
+            <h2 class="perfect-title">Ideal para quem deseja</h2>
+            <ul class="perfect-list">
+                <li class="perfect-item">
+                    <span class="perfect-check">✓</span>
+                    <span>Criar uma rotina espiritual consistente</span>
+                </li>
+                <li class="perfect-item">
+                    <span class="perfect-check">✓</span>
+                    <span>Fortalecer a fé diariamente</span>
+                </li>
+                <li class="perfect-item">
+                    <span class="perfect-check">✓</span>
+                    <span>Desenvolver mais intimidade com Deus</span>
+                </li>
+                <li class="perfect-item">
+                    <span class="perfect-check">✓</span>
+                    <span>Aplicar os ensinamentos bíblicos na vida real</span>
+                </li>
+                <li class="perfect-item">
+                    <span class="perfect-check">✓</span>
+                    <span>Reservar alguns minutos por dia para crescer espiritualmente</span>
+                </li>
+            </ul>
+        </section>
+
         <!-- ═══ OFERTA EXCLUSIVA WARNING ═══ -->
         <section class="oferta-exclusiva">
-            <h2>Oferta Final</h2>
+            <h2>Oferta Exclusiva</h2>
+            <p>Esta página aparece apenas uma vez. Ao sair, esta oportunidade desaparece.</p>
         </section>
 
         <!-- ═══ VALUE & PRICE SECTION ── -->
@@ -641,7 +626,7 @@
             <div class="price-de">De R$37</div>
             <div class="price-por">por apenas</div>
             <div class="price-value">
-                <span>R$</span> 12,90
+                <span>R$</span> 16,90
             </div>
             <div class="price-features">
                 <div class="price-feat-item">Pagamento único</div>
@@ -649,35 +634,20 @@
             </div>
         </section>
 
-        <!-- ═══ WARNING BLOCK ── -->
-        <div class="warning-block">
-            <h4>⚠️ Atenção</h4>
-            <p>Esta é a última oferta disponível nesta página. Ao sair, ela desaparecerá definitivamente.</p>
-        </div>
-
         <!-- ═══ ONE CLICK ACTION BOX ── -->
         <section class="action-box">
             <!-- CTA Button -->
             <!-- Replace the href with your Lastlink/Hotmart one-click upsell token/url -->
-            <a href="https://lastlink.com/p/CC6FF6E5B/checkout-payment/" class="btn-cta">👉 SIM! QUERO APROVEITAR ESTA CONDIÇÃO ESPECIAL</a>
+            <a href="https://lastlink.com/p/C9323A189/checkout-payment/" class="btn-cta">👉 SIM! QUERO COMEÇAR MEU PLANO DEVOCIONAL</a>
             
             <br>
             
             <!-- Decline Link -->
             <!-- Replace the href with your thank-you page url to decline and go to thank you page -->
-            <a href="upsell3.html" class="decline-link">
-                Não, obrigado. Quero recusar esta oferta e finalizar minha compra apenas com os itens anteriores.
+            <a href="w5v8x2y.html" class="decline-link">
+                Não, obrigado. Quero recusar esta oportunidade e continuar com minhas compras anteriores.
             </a>
         </section>
-
-        <!-- ═══ GUARANTEE ═══ -->
-        <div class="guarantee-box">
-            <div class="guarantee-icon">🛡️</div>
-            <div class="guarantee-text">
-                <h5>Garantia de 7 dias</h5>
-                <p>Seu investimento está 100% protegido. Se você não sentir que o Plano Devocional complementou sua caminhada, devolvemos seu dinheiro integralmente.</p>
-            </div>
-        </div>
 
     </div>
 

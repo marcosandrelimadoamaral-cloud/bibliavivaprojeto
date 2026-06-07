@@ -3,22 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🚨 Oferta Exclusiva — A Bíblia em Música</title>
+    <title>🚨 Oferta Final — A Bíblia em Música</title>
     
     <!-- Favicon -->
     <link rel="icon" href="images/favicon-copiar-150x150.webp" sizes="32x32">
     <link rel="icon" href="images/favicon-copiar-300x300.webp" sizes="192x192">
     <link rel="apple-touch-icon" href="images/favicon-copiar-300x300.webp">
-    
-    <!-- Back Redirect -->
-    <script>
-        (function() {
-            history.pushState(null, null, location.href);
-            window.addEventListener('popstate', function() {
-                window.location.replace('downsell3.html');
-            });
-        })();
-    </script>
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -77,7 +67,7 @@
         }
         .top-bar p {
             font-size: 0.9rem;
-            color: var(--pergaminho-escuro);
+            color: var(--ouro-claro);
             text-transform: uppercase;
             font-weight: 700;
         }
@@ -96,7 +86,7 @@
         }
         .hero h2 {
             font-family: 'Lora', serif;
-            font-size: 1.65rem;
+            font-size: 1.6rem;
             color: var(--branco);
             line-height: 1.45;
             margin-bottom: 20px;
@@ -104,13 +94,6 @@
         }
         .hero h2 span {
             color: var(--ouro-claro);
-        }
-        .hero-sub {
-            font-size: 1.05rem;
-            color: var(--pergaminho);
-            max-width: 550px;
-            margin: 15px auto 0 auto;
-            line-height: 1.6;
         }
 
         /* ── QUOTE BOX ── */
@@ -123,8 +106,17 @@
             position: relative;
             text-align: center;
         }
+        .quote-box h3 {
+            font-family: 'Lora', serif;
+            font-size: 1.35rem;
+            color: var(--ouro-claro);
+            margin-bottom: 15px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
         .quote-box p {
-            font-size: 1rem;
+            font-size: 0.98rem;
             color: var(--pergaminho-escuro);
             line-height: 1.6;
             margin-bottom: 12px;
@@ -153,15 +145,8 @@
             margin-bottom: 20px;
             font-weight: bold;
         }
-        .intro-text {
-            font-size: 1.1rem;
-            color: var(--pergaminho);
-            line-height: 1.7;
-            max-width: 550px;
-            margin: 0 auto;
-        }
 
-        /* ── MOCKUP AREA (Music Player Playlist) ── */
+        /* ── MOCKUP AREA (Music Player Mockup with discount badge) ── */
         .mockup-title {
             text-align: center;
             font-size: 0.95rem;
@@ -182,6 +167,30 @@
             position: relative;
             overflow: hidden;
         }
+        
+        /* Gold discount tag overlay */
+        .discount-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: var(--ouro);
+            color: #000;
+            padding: 6px 12px;
+            font-size: 0.8rem;
+            font-weight: 900;
+            border-radius: 4px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            z-index: 10;
+            animation: bounce 2s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+        }
+
         .mockup-container::before {
             content: '';
             position: absolute;
@@ -237,7 +246,6 @@
             border: 1px solid rgba(255,255,255,0.04);
             border-radius: 6px;
             font-size: 0.88rem;
-            transition: all 0.2s;
         }
         .playlist-track.active {
             background: rgba(196, 154, 40, 0.08);
@@ -286,26 +294,19 @@
             color: #887a68;
             font-size: 0.78rem;
         }
-        .playlist-track.active .track-duration {
-            color: var(--ouro-claro);
-            font-weight: bold;
-        }
 
         /* ── BENEFITS SECTION ── */
         .benefits-section {
             margin-bottom: 45px;
         }
-        .benefits-title-box {
+        .benefits-title {
             text-align: center;
-            margin-bottom: 25px;
-        }
-        .benefits-label {
             font-size: 1.15rem;
             text-transform: uppercase;
             letter-spacing: 2px;
             color: var(--ouro);
+            margin-bottom: 25px;
             font-weight: 800;
-            margin-bottom: 6px;
         }
         .benefits-list {
             display: flex;
@@ -330,6 +331,7 @@
         .benefit-icon {
             font-size: 1.4rem;
             line-height: 1;
+            color: var(--ouro-claro);
         }
         .benefit-content p {
             font-size: 1rem;
@@ -337,60 +339,31 @@
             font-weight: 600;
         }
 
-        /* ── PERFECT FOR SECTION ── */
-        .perfect-section {
-            background: rgba(196, 154, 40, 0.03);
+        /* ── WARNING BLOCK ── */
+        .warning-block {
+            background: rgba(139, 26, 26, 0.08);
+            border: 1px solid rgba(139, 26, 26, 0.3);
             border-radius: 8px;
-            border: 1px solid rgba(196, 154, 40, 0.08);
-            padding: 24px;
-            margin-bottom: 45px;
-        }
-        .perfect-title {
+            padding: 20px;
+            margin-bottom: 40px;
             text-align: center;
-            font-size: 1.05rem;
+        }
+        .warning-block h4 {
+            color: #ff6666;
+            font-size: 1rem;
             text-transform: uppercase;
-            letter-spacing: 1px;
-            color: var(--ouro);
-            margin-bottom: 20px;
-            font-weight: 800;
-        }
-        .perfect-list {
-            list-style: none;
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
-        .perfect-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 12px;
-            font-size: 0.98rem;
-            color: var(--pergaminho);
-        }
-        .perfect-check {
-            color: var(--ouro-claro);
-            font-weight: bold;
-            font-size: 1.1rem;
-        }
-
-        /* ── OFERTA EXCLUSIVA WARNING ── */
-        .oferta-exclusiva {
-            text-align: center;
-            margin-bottom: 35px;
-        }
-        .oferta-exclusiva h2 {
-            font-size: 1.15rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            color: var(--ouro);
-            font-weight: 800;
             margin-bottom: 8px;
+            letter-spacing: 1px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
         }
-        .oferta-exclusiva p {
+        .warning-block p {
             font-size: 0.95rem;
-            color: #d4af37;
-            font-style: italic;
-            font-family: 'Lora', serif;
+            color: var(--pergaminho);
+            line-height: 1.5;
         }
 
         /* ── VALUE & PRICE SECTION ── */
@@ -536,8 +509,8 @@
 
     <!-- ═══ TOP WARNING BAR ═══ -->
     <div class="top-bar">
-        <h1>🚨 IMAGINE ISSO...</h1>
-        <p>Levar a Palavra de Deus com você durante todo o dia.</p>
+        <h1>🚨 OFERTA FINAL: Condição especial</h1>
+        <p>Antes de encerrar sua jornada, quero liberar uma condição especial.</p>
     </div>
 
     <div class="container">
@@ -545,35 +518,30 @@
         <!-- ═══ HERO SECTION ═══ -->
         <section class="hero">
             <h2>
-                Você já está aprendendo mais sobre as Escrituras e fortalecendo sua caminhada espiritual.<br><br>
-                <span>Mas existe uma forma ainda mais simples de manter sua mente conectada à Palavra.</span>
+                Talvez você tenha decidido não adicionar a Bíblia em Música neste momento. E tudo bem.<br><br>
+                <span>Mas eu realmente acredito que ela pode se tornar uma companhia diária na sua caminhada com Deus.</span>
             </h2>
-            <p class="hero-sub">
-                Sem precisar parar o que está fazendo. Sem precisar abrir um livro. Sem precisar reservar um horário específico.
+            <p style="font-size: 1.05rem; color: var(--pergaminho); max-width: 550px; margin: 15px auto 0 auto; text-align: center;">
+                Por isso, antes que você saia desta página, quero liberar uma condição exclusiva.
             </p>
         </section>
 
         <!-- ═══ QUOTE BOX ═══ -->
         <div class="quote-box">
-            <p>Leve a presença de Deus para a sua rotina diária de forma simples e inspiradora.</p>
-            <p><strong>A música tem o poder de fixar as Escrituras em nosso coração enquanto trabalhamos, descansamos ou nos deslocamos.</strong></p>
+            <h3>A mesma oferta</h3>
+            <p>Apenas com uma condição especial disponível agora.</p>
         </div>
 
         <!-- ═══ INTRODUCTION ═══ -->
         <section class="intro-section">
-            <h3 class="intro-title">Apresentamos</h3>
+            <h3 class="intro-title">Condição Especial</h3>
             <div class="intro-product">🎵 A Bíblia em Música</div>
-            <p class="intro-text">
-                Uma coleção especial de músicas inspiradas nas Escrituras para ajudar você a fortalecer sua fé enquanto realiza suas atividades do dia a dia.
-            </p>
-            <p class="intro-text" style="font-size: 0.95rem; color: var(--ouro-claro); margin-top: 15px; font-style: italic;">
-                Perfeito para ouvir dirigindo, trabalhando, descansando, caminhando ou simplesmente aproveitando um momento de paz.
-            </p>
         </section>
 
         <!-- ═══ MOCKUP AREA (Music Player Mockup) ═══ -->
         <div class="mockup-title">Visualização das Canções</div>
         <div class="mockup-container">
+            <div class="discount-badge">65% OFF</div>
             <div class="playlist-header">
                 <div class="playlist-title">
                     🎵 A Bíblia em Música
@@ -615,32 +583,19 @@
                     </div>
                     <span class="track-duration">3:50</span>
                 </div>
-                <!-- Track 4 -->
-                <div class="playlist-track">
-                    <div class="track-left">
-                        <div class="track-play-btn">▶</div>
-                        <div>
-                            <span class="track-title">...</span>
-                            <span class="track-subtitle">E diversas outras canções inspiradoras</span>
-                        </div>
-                    </div>
-                    <span class="track-duration">...</span>
-                </div>
             </div>
         </div>
 
         <!-- ═══ BENEFITS ═══ -->
         <section class="benefits-section">
-            <div class="benefits-title-box">
-                <h2 class="benefits-label">O que você vai receber</h2>
-            </div>
+            <h2 class="benefits-title">Você continuará recebendo:</h2>
 
             <div class="benefits-list">
                 <!-- Benefit 1 -->
                 <div class="benefit-item">
                     <div class="benefit-icon">🎵</div>
                     <div class="benefit-content">
-                        <p>Canções inspiradas em histórias bíblicas</p>
+                        <p>Todas as músicas inspiradas nas Escrituras</p>
                     </div>
                 </div>
 
@@ -648,7 +603,7 @@
                 <div class="benefit-item">
                     <div class="benefit-icon">🎵</div>
                     <div class="benefit-content">
-                        <p>Músicas com mensagens de fé e esperança</p>
+                        <p>Mensagens de fé e esperança</p>
                     </div>
                 </div>
 
@@ -656,7 +611,7 @@
                 <div class="benefit-item">
                     <div class="benefit-icon">🎵</div>
                     <div class="benefit-content">
-                        <p>Conteúdo edificante para todas as idades</p>
+                        <p>Conteúdo para ouvir em qualquer lugar</p>
                     </div>
                 </div>
 
@@ -664,7 +619,7 @@
                 <div class="benefit-item">
                     <div class="benefit-icon">🎵</div>
                     <div class="benefit-content">
-                        <p>Acesso imediato e vitalício</p>
+                        <p>Acesso imediato</p>
                     </div>
                 </div>
 
@@ -672,43 +627,10 @@
                 <div class="benefit-item">
                     <div class="benefit-icon">🎵</div>
                     <div class="benefit-content">
-                        <p>Áudios para ouvir quando e onde quiser</p>
+                        <p>Acesso vitalício</p>
                     </div>
                 </div>
             </div>
-        </section>
-
-        <!-- ═══ PERFECT FOR ═══ -->
-        <section class="perfect-section">
-            <h2 class="perfect-title">Perfeito para quem deseja</h2>
-            <ul class="perfect-list">
-                <li class="perfect-item">
-                    <span class="perfect-check">✓</span>
-                    <span>Manter a Palavra presente diariamente</span>
-                </li>
-                <li class="perfect-item">
-                    <span class="perfect-check">✓</span>
-                    <span>Fortalecer sua fé através da música</span>
-                </li>
-                <li class="perfect-item">
-                    <span class="perfect-check">✓</span>
-                    <span>Criar um ambiente mais edificante em casa</span>
-                </li>
-                <li class="perfect-item">
-                    <span class="perfect-check">✓</span>
-                    <span>Compartilhar conteúdo inspirador com a família</span>
-                </li>
-                <li class="perfect-item">
-                    <span class="perfect-check">✓</span>
-                    <span>Transformar momentos comuns em momentos de crescimento espiritual</span>
-                </li>
-            </ul>
-        </section>
-
-        <!-- ═══ OFERTA EXCLUSIVA WARNING ═══ -->
-        <section class="oferta-exclusiva">
-            <h2>Oferta Exclusiva</h2>
-            <p>Esta oportunidade aparece apenas uma vez. Ao sair desta página ela desaparecerá.</p>
         </section>
 
         <!-- ═══ VALUE & PRICE SECTION ── -->
@@ -716,27 +638,33 @@
             <div class="price-de">De R$37</div>
             <div class="price-por">por apenas</div>
             <div class="price-value">
-                <span>R$</span> 16,90
+                <span>R$</span> 12,90
             </div>
             <div class="price-features">
                 <div class="price-feat-item">Pagamento único</div>
-                <div class="price-feat-item">Acesso imediato</div>
-                <div class="price-feat-item">Acesso vitalício</div>
+                <div class="price-feat-item">Sem mensalidades</div>
+                <div class="price-feat-item">Acesso para sempre</div>
             </div>
         </section>
+
+        <!-- ═══ WARNING BLOCK ── -->
+        <div class="warning-block">
+            <h4>⚠️ Atenção</h4>
+            <p>Esta é a última oferta disponível. Ao sair desta página, ela desaparecerá definitivamente.</p>
+        </div>
 
         <!-- ═══ ONE CLICK ACTION BOX ── -->
         <section class="action-box">
             <!-- CTA Button -->
             <!-- Replace the href with your Lastlink/Hotmart one-click upsell token/url -->
-            <a href="https://lastlink.com/p/C815AAAFA/checkout-payment/" class="btn-cta">👉 SIM! QUERO RECEBER A BÍBLIA EM MÚSICA</a>
+            <a href="https://lastlink.com/p/C86196840/checkout-payment/" class="btn-cta">👉 SIM! QUERO APROVEITAR ESTA CONDIÇÃO ESPECIAL</a>
             
             <br>
             
             <!-- Decline Link -->
-            <!-- Replace the href with your downsell page url to decline -->
-            <a href="downsell3.html" class="decline-link">
-                Não, obrigado. Desejo continuar sem esta oferta.
+            <!-- Replace the href with your thank-you page url to decline -->
+            <a href="s8t9v2x.html" class="decline-link">
+                Não, obrigado. Desejo finalizar meu pedido.
             </a>
         </section>
 
