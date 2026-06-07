@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🚨 Condição Especial — Bíblia Falada</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon-copiar-150x150.webp" sizes="32x32">
+    <link rel="icon" href="images/favicon-copiar-300x300.webp" sizes="192x192">
+    <link rel="apple-touch-icon" href="images/favicon-copiar-300x300.webp">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --ouro: #C49A28;
+            --ouro-claro: #E8C84A;
+            --marrom: #3D2B1A;
+            --marrom-escuro: #1a0e06;
+            --marrom-medio: #6B4226;
+            --pergaminho: #F5EDD5;
+            --pergaminho-escuro: #E8D8A8;
+            --terracota: #C4714A;
+            --verde: #2E7D32;
+            --verde-btn: #388E3C;
+            --verde-btn-hover: #2E7D32;
+            --vermelho-preco: #C62828;
+            --vermelho: #8B1A1A;
+            --branco: #FDFAF4;
+            --texto-claro: #FDFAF4;
+            --texto-escuro: #2C1A0E;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: var(--marrom-escuro);
+            color: var(--texto-claro);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        /* ── TOP WARNING BAR ── */
+        .top-bar {
+            background: var(--vermelho);
+            color: var(--branco);
+            text-align: center;
+            padding: 15px 10px;
+            border-bottom: 2px solid var(--ouro);
+        }
+        .top-bar h1 {
+            font-size: 1.2rem;
+            margin-bottom: 4px;
+            text-transform: uppercase;
+            color: #fff;
+            letter-spacing: 1px;
+            font-weight: 900;
+        }
+        .top-bar p {
+            font-size: 0.9rem;
+            color: var(--pergaminho-escuro);
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+
+        /* ── CONTAINER ── */
+        .container {
+            max-width: 650px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* ── HERO SECTION ── */
+        .hero {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+        .hero h2 {
+            font-family: 'Lora', serif;
+            font-size: 1.55rem;
+            color: var(--branco);
+            line-height: 1.5;
+            margin-bottom: 20px;
+            font-weight: normal;
+        }
+        .hero h2 span {
+            color: var(--ouro-claro);
+            font-weight: bold;
+        }
+        .hero-sub {
+            font-size: 1.05rem;
+            color: var(--pergaminho);
+            max-width: 550px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        /* ── QUESTIONS BOX (QUOTE) ── */
+        .questions-box {
+            background: rgba(196, 154, 40, 0.05);
+            border: 1px solid rgba(196, 154, 40, 0.2);
+            border-radius: 8px;
+            padding: 28px 24px;
+            margin-bottom: 40px;
+            position: relative;
+            text-align: center;
+        }
+        .questions-box p {
+            font-family: 'Lora', serif;
+            font-size: 1.1rem;
+            color: var(--pergaminho-escuro);
+            line-height: 1.6;
+        }
+
+        /* ── INTRODUCTION TEXT ── */
+        .intro-section {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .intro-title {
+            font-size: 1.15rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--ouro);
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+        .intro-text {
+            font-size: 1.05rem;
+            color: #d1c7b7;
+            margin-bottom: 15px;
+            line-height: 1.7;
+        }
+        .intro-product {
+            font-family: 'Lora', serif;
+            font-size: 2.2rem;
+            color: var(--ouro-claro);
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        /* ── MOCKUP AREA (Audio Player Playlist) ── */
+        .mockup-title {
+            text-align: center;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #887a68;
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+        .mockup-container {
+            width: 100%;
+            background: linear-gradient(135deg, rgba(255,255,255,0.01) 0%, rgba(255,255,255,0.04) 100%);
+            border: 1px solid rgba(196, 154, 40, 0.15);
+            border-radius: 12px;
+            padding: 16px;
+            margin-bottom: 45px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+            position: relative;
+            overflow: hidden;
+        }
+        .mockup-container::before {
+            content: '';
+            position: absolute;
+            top: 0; left: -100%;
+            width: 50%; height: 100%;
+            background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.03), transparent);
+            transform: skewX(-25deg);
+            animation: shine 4s infinite;
+        }
+        @keyframes shine {
+            0% { left: -100%; }
+            50% { left: 150%; }
+            100% { left: 150%; }
+        }
+
+        /* Gold discount tag overlay */
+        .discount-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: var(--ouro);
+            color: #000;
+            padding: 6px 12px;
+            font-size: 0.8rem;
+            font-weight: 900;
+            border-radius: 4px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            z-index: 10;
+            animation: bounce 2s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+        }
+        
+        .playlist-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-bottom: 12px;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+            margin-bottom: 12px;
+        }
+        .playlist-title {
+            font-size: 0.85rem;
+            font-weight: bold;
+            color: var(--ouro-claro);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .playlist-badge {
+            font-size: 0.7rem;
+            background: var(--terracota);
+            color: #fff;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 800;
+        }
+        .playlist-body {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        .playlist-track {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 12px;
+            background: rgba(255,255,255,0.02);
+            border: 1px solid rgba(255,255,255,0.04);
+            border-radius: 6px;
+            font-size: 0.85rem;
+        }
+        .playlist-track.active {
+            background: rgba(196, 154, 40, 0.08);
+            border-color: rgba(196, 154, 40, 0.3);
+        }
+        .track-left {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .track-play-btn {
+            width: 22px; height: 22px;
+            border-radius: 50%;
+            background: var(--ouro);
+            color: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.65rem;
+            font-weight: bold;
+        }
+        .playlist-track.active .track-play-btn {
+            background: var(--ouro-claro);
+        }
+        .playlist-track.playing .track-play-btn {
+            animation: pulse-play 1.5s infinite;
+        }
+        @keyframes pulse-play {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        .track-title {
+            font-weight: 600;
+            color: var(--branco);
+        }
+        .track-duration {
+            color: #887a68;
+            font-size: 0.75rem;
+        }
+        .playlist-track.active .track-duration {
+            color: var(--ouro-claro);
+            font-weight: bold;
+        }
+
+        /* ── BENEFITS SECTION ── */
+        .benefits-section {
+            margin-bottom: 45px;
+        }
+        .benefits-title-box {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        .benefits-label {
+            font-size: 1.15rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--ouro);
+            font-weight: 800;
+            margin-bottom: 6px;
+        }
+        .benefits-list {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        .benefit-item {
+            display: flex;
+            gap: 16px;
+            background: rgba(255,255,255,0.01);
+            border: 1px solid rgba(255,255,255,0.03);
+            padding: 16px 20px;
+            border-radius: 8px;
+            align-items: center;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+        .benefit-item:hover {
+            transform: translateY(-2px);
+            border-color: rgba(196, 154, 40, 0.2);
+            background: rgba(255,255,255,0.02);
+        }
+        .benefit-icon {
+            font-size: 1.5rem;
+            line-height: 1;
+        }
+        .benefit-content p {
+            font-size: 0.98rem;
+            color: var(--pergaminho);
+            font-weight: 600;
+        }
+
+        /* ── IMAGINE TEXT SECTION ── */
+        .imagine-section {
+            background: rgba(255, 255, 255, 0.01);
+            border: 1px solid rgba(255, 255, 255, 0.04);
+            border-radius: 10px;
+            padding: 28px 24px;
+            margin-bottom: 40px;
+        }
+        .imagine-section h3 {
+            font-family: 'Lora', serif;
+            font-size: 1.35rem;
+            color: var(--pergaminho-escuro);
+            text-align: center;
+            margin-bottom: 20px;
+            font-weight: 600;
+            line-height: 1.4;
+        }
+        .imagine-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            max-width: 480px;
+            margin: 0 auto 24px auto;
+        }
+        .imagine-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            font-size: 0.98rem;
+            color: var(--pergaminho);
+        }
+        .imagine-check {
+            color: var(--ouro-claro);
+            font-weight: bold;
+        }
+        .imagine-p {
+            font-size: 0.95rem;
+            color: #d1c7b7;
+            text-align: center;
+            margin-bottom: 12px;
+            line-height: 1.6;
+        }
+
+        /* ── WARNING BLOCK ── */
+        .warning-block {
+            background: rgba(139, 26, 26, 0.08);
+            border: 1px solid rgba(139, 26, 26, 0.3);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        .warning-block h4 {
+            color: #ff6666;
+            font-size: 1rem;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            letter-spacing: 1px;
+            font-weight: 700;
+        }
+        .warning-block p {
+            font-size: 0.95rem;
+            color: var(--pergaminho);
+            line-height: 1.5;
+        }
+
+        /* ── VALUE & PRICE SECTION ── */
+        .price-section {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 30px;
+            background: linear-gradient(180deg, rgba(61, 43, 26, 0.3) 0%, rgba(26, 14, 6, 0.3) 100%);
+            border-radius: 10px;
+            border: 1px solid rgba(196, 154, 40, 0.15);
+        }
+        .price-de {
+            font-size: 1.1rem;
+            color: #887a68;
+            text-decoration: line-through;
+            margin-bottom: 6px;
+        }
+        .price-por {
+            font-size: 1.1rem;
+            color: var(--ouro);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        .price-value {
+            font-family: 'Lora', serif;
+            font-size: 3.5rem;
+            color: var(--ouro-claro);
+            font-weight: bold;
+            line-height: 1.1;
+            margin-bottom: 15px;
+            text-shadow: 0 2px 10px rgba(196, 154, 40, 0.25);
+        }
+        .price-value span {
+            font-size: 1.5rem;
+            font-weight: normal;
+            vertical-align: middle;
+        }
+        .price-features {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            font-size: 0.85rem;
+            color: var(--pergaminho);
+            border-top: 1px solid rgba(255,255,255,0.06);
+            padding-top: 12px;
+            margin-top: 5px;
+        }
+        .price-feat-item {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+        .price-feat-item::before {
+            content: "✓";
+            color: var(--ouro-claro);
+            font-weight: bold;
+        }
+
+        /* ── ONE CLICK ACTION BOX ── */
+        .action-box {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+        
+        .btn-cta {
+            display: block;
+            width: 100%;
+            max-width: 500px;
+            margin: 0 auto 20px auto;
+            background: linear-gradient(180deg, #4CAF50 0%, #2E7D32 100%);
+            color: #ffffff;
+            font-size: 1.15rem;
+            font-weight: 800;
+            padding: 20px 24px;
+            border-radius: 50px;
+            text-decoration: none;
+            text-transform: uppercase;
+            box-shadow: 0 10px 25px rgba(46, 125, 50, 0.4);
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s;
+            letter-spacing: 0.5px;
+            position: relative;
+            overflow: hidden;
+        }
+        .btn-cta::after {
+            content: '';
+            position: absolute;
+            top: 0; left: -50%;
+            width: 20%; height: 100%;
+            background: linear-gradient(to right, transparent, rgba(255,255,255,0.3), transparent);
+            transform: skewX(-25deg);
+            animation: pulse-shine 3s infinite;
+        }
+        @keyframes pulse-shine {
+            0% { left: -50%; }
+            30% { left: 130%; }
+            100% { left: 130%; }
+        }
+        .btn-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 30px rgba(46, 125, 50, 0.5);
+            background: linear-gradient(180deg, #66BB6A 0%, #388E3C 100%);
+        }
+        .btn-cta:active {
+            transform: translateY(1px);
+        }
+
+        .decline-link {
+            display: inline-block;
+            color: #887a68;
+            font-size: 0.85rem;
+            text-decoration: underline;
+            transition: color 0.2s;
+            cursor: pointer;
+            line-height: 1.4;
+            max-width: 480px;
+            margin: 0 auto;
+        }
+        .decline-link:hover {
+            color: #bfaea2;
+        }
+
+        /* ── GUARANTEE BADGE ── */
+        .guarantee-box {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 45px;
+        }
+        .guarantee-icon {
+            font-size: 2.2rem;
+            color: #42a5f5;
+            line-height: 1;
+        }
+        .guarantee-text h5 {
+            font-size: 0.95rem;
+            color: var(--branco);
+            font-weight: bold;
+            margin-bottom: 4px;
+        }
+        .guarantee-text p {
+            font-size: 0.85rem;
+            color: #a19789;
+            line-height: 1.4;
+        }
+
+        /* ── FOOTER ── */
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            background: #0d0703;
+            border-top: 1px solid rgba(255,255,255,0.03);
+            font-size: 0.75rem;
+            color: #665c52;
+            line-height: 1.8;
+        }
+        footer p {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ═══ TOP WARNING BAR ═══ -->
+    <div class="top-bar">
+        <h1>🚨 UMA ÚLTIMA OPORTUNIDADE:</h1>
+        <p>Antes de sair, quero fazer algo especial para você.</p>
+    </div>
+
+    <div class="container">
+
+        <!-- ═══ HERO SECTION ═══ -->
+        <section class="hero">
+            <h2>
+                Talvez você tenha decidido não adicionar a Bíblia Falada neste momento. <span>E tudo bem.</span>
+            </h2>
+            <p class="hero-sub" style="font-family: 'Lora', serif; font-style: italic; margin-top: 20px; font-size: 1.3rem; color: var(--pergaminho); line-height: 1.6;">
+                Mas eu realmente acredito que ela pode <span style="color: var(--ouro-claro); font-weight: bold; font-style: normal;">complementar perfeitamente</span> aquilo que você acabou de adquirir.
+            </p>
+        </section>
+
+        <!-- ═══ QUESTIONS BOX ═══ -->
+        <div class="questions-box">
+            <p>Por isso, antes que esta página seja encerrada, quero liberar uma condição especial.</p>
+        </div>
+
+        <!-- ═══ INTRODUCTION ═══ -->
+        <section class="intro-section">
+            <h3 class="intro-title">A mesma Bíblia Falada</h3>
+            <div class="intro-product">🔊 Bíblia Falada</div>
+            <p class="intro-text">Agora com uma condição exclusiva.</p>
+        </section>
+
+        <!-- ═══ MOCKUP AREA (Audio Player Playlist) ═══ -->
+        <div class="mockup-title">Veja o que você vai receber</div>
+        <div class="mockup-container">
+            <div class="discount-badge">Desconto Final</div>
+            <div class="playlist-header">
+                <div class="playlist-title">
+                    🎧 Bíblia Falada
+                    <span class="playlist-badge">66 Áudios MP3</span>
+                </div>
+                <div style="font-size: 0.75rem; color: #887a68;">Área de Membros</div>
+            </div>
+            <div class="playlist-body">
+                <!-- Track 1 -->
+                <div class="playlist-track active">
+                    <div class="track-left">
+                        <div class="track-play-btn">▶</div>
+                        <span class="track-title">01. Gênesis — Origem e Propósito</span>
+                    </div>
+                    <span class="track-duration">3:00</span>
+                </div>
+                <!-- Track 2 -->
+                <div class="playlist-track">
+                    <div class="track-left">
+                        <div class="track-play-btn">▶</div>
+                        <span class="track-title">02. Êxodo — Libertação e Aliança</span>
+                    </div>
+                    <span class="track-duration">3:00</span>
+                </div>
+                <!-- Track 3 -->
+                <div class="playlist-track">
+                    <div class="track-left">
+                        <div class="track-play-btn">▶</div>
+                        <span class="track-title">03. Levítico — Santidade e Acesso</span>
+                    </div>
+                    <span class="track-duration">3:00</span>
+                </div>
+                <!-- Track 4 -->
+                <div class="playlist-track">
+                    <div class="track-left">
+                        <div class="track-play-btn">▶</div>
+                        <span class="track-title">...</span>
+                    </div>
+                    <span class="track-duration">...</span>
+                </div>
+                <!-- Track 5 -->
+                <div class="playlist-track">
+                    <div class="track-left">
+                        <div class="track-play-btn">▶</div>
+                        <span class="track-title">66. Apocalipse — Consumação de Tudo</span>
+                    </div>
+                    <span class="track-duration">3:00</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ═══ BENEFITS ═══ -->
+        <section class="benefits-section">
+            <div class="benefits-title-box">
+                <h2 class="benefits-label">Você continuará recebendo</h2>
+            </div>
+            
+            <div class="benefits-list">
+                <!-- Benefit 1 -->
+                <div class="benefit-item">
+                    <div class="benefit-icon">📚</div>
+                    <div class="benefit-content">
+                        <p>Os 66 livros da Bíblia explicados em apenas 3 minutos</p>
+                    </div>
+                </div>
+
+                <!-- Benefit 2 -->
+                <div class="benefit-item">
+                    <div class="benefit-icon">📚</div>
+                    <div class="benefit-content">
+                        <p>Resumos rápidos e objetivos</p>
+                    </div>
+                </div>
+
+                <!-- Benefit 3 -->
+                <div class="benefit-item">
+                    <div class="benefit-icon">📚</div>
+                    <div class="benefit-content">
+                        <p>Contexto histórico de cada livro</p>
+                    </div>
+                </div>
+
+                <!-- Benefit 4 -->
+                <div class="benefit-item">
+                    <div class="benefit-icon">📚</div>
+                    <div class="benefit-content">
+                        <p>A mensagem principal das Escrituras</p>
+                    </div>
+                </div>
+
+                <!-- Benefit 5 -->
+                <div class="benefit-item">
+                    <div class="benefit-icon">📚</div>
+                    <div class="benefit-content">
+                        <p>Explicações simples e fáceis de compreender</p>
+                    </div>
+                </div>
+
+                <!-- Benefit 6 -->
+                <div class="benefit-item">
+                    <div class="benefit-icon">📚</div>
+                    <div class="benefit-content">
+                        <p>Acesso imediato e vitalício</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══ IMAGINE SECTION ═══ -->
+        <section class="imagine-section">
+            <h3>Imagine abrir qualquer livro da Bíblia... E saber exatamente:</h3>
+            <ul class="imagine-list">
+                <li class="imagine-item">
+                    <span class="imagine-check">✓</span>
+                    <span>Quem escreveu</span>
+                </li>
+                <li class="imagine-item">
+                    <span class="imagine-check">✓</span>
+                    <span>Por que foi escrito</span>
+                </li>
+                <li class="imagine-item">
+                    <span class="imagine-check">✓</span>
+                    <span>Qual é sua mensagem principal</span>
+                </li>
+                <li class="imagine-item">
+                    <span class="imagine-check">✓</span>
+                    <span>Como ele se conecta ao restante das Escrituras</span>
+                </li>
+            </ul>
+            <p class="imagine-p">Sem precisar assistir aulas longas.</p>
+            <p class="imagine-p">Sem linguagem complicada.</p>
+            <p class="imagine-p">Sem passar horas pesquisando.</p>
+        </section>
+
+        <!-- ═══ WARNING BLOCK ── -->
+        <div class="warning-block">
+            <h4>⚠️ Atenção</h4>
+            <p>Esta é a última vez que esta oferta será exibida. Ao sair desta página, ela desaparecerá definitivamente.</p>
+        </div>
+
+        <!-- ═══ VALUE & PRICE SECTION ── -->
+        <section class="price-section">
+            <div class="price-de">De R$67</div>
+            <div class="price-por">por apenas</div>
+            <div class="price-value">
+                <span>R$</span> 12,90
+            </div>
+            <div class="price-features">
+                <div class="price-feat-item">Pagamento único</div>
+                <div class="price-feat-item">Acesso imediato</div>
+                <div class="price-feat-item">Acesso vitalício</div>
+            </div>
+        </section>
+
+        <!-- ═══ ONE CLICK ACTION BOX ── -->
+        <section class="action-box">
+            <!-- CTA Button -->
+            <a href="https://lastlink.com/p/C53FEF43C/checkout-payment/" class="btn-cta">👉 SIM! QUERO APROVEITAR ESTA CONDIÇÃO ESPECIAL</a>
+            
+            <br>
+            
+            <!-- Decline Link -->
+            <a href="upsell3.html" class="decline-link">
+                Não, obrigado. Desejo continuar sem esta oferta.
+            </a>
+        </section>
+
+        <!-- ═══ GUARANTEE ═══ -->
+        <div class="guarantee-box">
+            <div class="guarantee-icon">🛡️</div>
+            <div class="guarantee-text">
+                <h5>Garantia de 7 dias</h5>
+                <p>Seu investimento está 100% protegido. Se você não sentir que a Bíblia Falada complementou sua compreensão das Escrituras, devolvemos 100% do seu investimento.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- ═══ FOOTER ═══ -->
+    <footer>
+        <p>
+            Copyright © 2026 | Conexões da Bíblia | Todos os direitos reservados.<br>
+            Este site não é afiliado ao Facebook™, Instagram™ ou qualquer outra plataforma.<br>
+            Material digital para uso pessoal. Proibida a reprodução comercial sem autorização.
+        </p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const tracks = [
+                {
+                    element: document.querySelector('.playlist-body .playlist-track:nth-child(1)'),
+                    file: '1_Livro de Gênesis.mp3'
+                },
+                {
+                    element: document.querySelector('.playlist-body .playlist-track:nth-child(2)'),
+                    file: '2_Livro de Êxodo.mp3'
+                },
+                {
+                    element: document.querySelector('.playlist-body .playlist-track:nth-child(3)'),
+                    file: '3_Livro de Levítico.mp3'
+                },
+                {
+                    element: document.querySelector('.playlist-body .playlist-track:nth-child(5)'),
+                    file: '66_Livro de Apocalipse.mp3'
+                }
+            ];
+
+            let currentTrackIndex = -1;
+            const audio = new Audio();
+
+            const originalDurations = tracks.map(track => {
+                const durationSpan = track.element.querySelector('.track-duration');
+                return durationSpan ? durationSpan.textContent : '3:00';
+            });
+
+            function updateUI() {
+                tracks.forEach((track, index) => {
+                    const btn = track.element.querySelector('.track-play-btn');
+                    if (index === currentTrackIndex) {
+                        track.element.classList.add('active');
+                        if (!audio.paused) {
+                            track.element.classList.add('playing');
+                            btn.textContent = '⏸';
+                        } else {
+                            track.element.classList.remove('playing');
+                            btn.textContent = '▶';
+                        }
+                    } else {
+                        track.element.classList.remove('active');
+                        track.element.classList.remove('playing');
+                        btn.textContent = '▶';
+                        
+                        const durationSpan = track.element.querySelector('.track-duration');
+                        if (durationSpan) {
+                            durationSpan.textContent = originalDurations[index];
+                        }
+                    }
+                });
+            }
+
+            tracks.forEach((track, index) => {
+                track.element.style.cursor = 'pointer';
+                track.element.addEventListener('click', () => {
+                    if (index === currentTrackIndex) {
+                        if (audio.paused) {
+                            audio.play().catch(err => console.log('Erro ao tocar áudio:', err));
+                        } else {
+                            audio.pause();
+                        }
+                    } else {
+                        currentTrackIndex = index;
+                        audio.src = encodeURI(track.file);
+                        audio.play().catch(err => console.log('Erro ao tocar áudio:', err));
+                    }
+                    updateUI();
+                });
+            });
+
+            audio.addEventListener('play', updateUI);
+            audio.addEventListener('pause', updateUI);
+            audio.addEventListener('ended', () => {
+                currentTrackIndex = -1;
+                updateUI();
+            });
+
+            audio.addEventListener('loadedmetadata', () => {
+                if (currentTrackIndex !== -1) {
+                    const minutes = Math.floor(audio.duration / 60);
+                    const seconds = Math.floor(audio.duration % 60).toString().padStart(2, '0');
+                    const durationSpan = tracks[currentTrackIndex].element.querySelector('.track-duration');
+                    if (durationSpan) {
+                        durationSpan.textContent = `${minutes}:${seconds}`;
+                    }
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎉 Compra Concluída — Seja Bem-Vindo!</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon-copiar-150x150.webp" sizes="32x32">
+    <link rel="icon" href="images/favicon-copiar-300x300.webp" sizes="192x192">
+    <link rel="apple-touch-icon" href="images/favicon-copiar-300x300.webp">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --ouro: #C49A28;
+            --ouro-claro: #E8C84A;
+            --marrom: #3D2B1A;
+            --marrom-escuro: #1a0e06;
+            --marrom-medio: #6B4226;
+            --pergaminho: #F5EDD5;
+            --pergaminho-escuro: #E8D8A8;
+            --terracota: #C4714A;
+            --verde: #2E7D32;
+            --branco: #FDFAF4;
+            --texto-claro: #FDFAF4;
+            --texto-escuro: #2C1A0E;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: var(--marrom-escuro);
+            color: var(--texto-claro);
+            overflow-x: hidden;
+            line-height: 1.8;
+        }
+
+        /* ── CONTAINER ── */
+        .container {
+            max-width: 650px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        /* ── HEADER SECTION ── */
+        .header-section {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+        .success-icon {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            display: inline-block;
+            animation: bounce 2s infinite;
+        }
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+        .header-section h1 {
+            font-size: 1.8rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--ouro-claro);
+            font-weight: 900;
+            margin-bottom: 15px;
+        }
+        .header-section h2 {
+            font-family: 'Lora', serif;
+            font-size: 1.4rem;
+            color: var(--branco);
+            font-weight: 500;
+            line-height: 1.4;
+            margin-bottom: 25px;
+        }
+        .header-section p {
+            font-size: 1rem;
+            color: var(--pergaminho);
+            max-width: 550px;
+            margin: 0 auto 15px auto;
+        }
+
+        /* ── INFO BOX ── */
+        .info-box {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            padding: 24px;
+            margin-bottom: 45px;
+            text-align: center;
+        }
+        .info-box p {
+            font-size: 0.92rem;
+            color: var(--pergaminho-escuro);
+            margin-bottom: 0;
+            line-height: 1.6;
+        }
+
+        /* ── DIVISOR ── */
+        .divisor {
+            text-align: center;
+            color: var(--ouro);
+            font-size: 1rem;
+            letter-spacing: 4px;
+            margin: 40px 0;
+            opacity: 0.6;
+        }
+
+        /* ── SECTION TITLE ── */
+        .section-title {
+            font-family: 'Lora', serif;
+            font-size: 1.5rem;
+            color: var(--ouro-claro);
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        /* ── TEXT CONTENT ── */
+        .text-content {
+            margin-bottom: 45px;
+        }
+        .text-content p {
+            font-size: 1.05rem;
+            color: #d1c7b7;
+            margin-bottom: 20px;
+            font-family: 'Lora', serif;
+        }
+        .text-content p strong {
+            color: var(--branco);
+        }
+
+        /* ── BLOCKQUOTE ── */
+        blockquote {
+            background: rgba(196, 154, 40, 0.04);
+            border-left: 3px solid var(--ouro);
+            padding: 20px 24px;
+            margin: 30px 0;
+            border-radius: 0 8px 8px 0;
+            font-family: 'Lora', serif;
+            font-style: italic;
+            font-size: 1.1rem;
+            color: var(--pergaminho-escuro);
+            line-height: 1.6;
+        }
+        blockquote footer {
+            display: block;
+            margin-top: 10px;
+            font-size: 0.85rem;
+            color: var(--ouro);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-style: normal;
+            font-weight: bold;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        /* ── ORAÇÃO BOX ── */
+        .oracao-box {
+            background: rgba(196, 154, 40, 0.02);
+            border: 1px solid rgba(196, 154, 40, 0.1);
+            border-radius: 10px;
+            padding: 30px;
+            text-align: center;
+            margin-bottom: 45px;
+        }
+        .oracao-box h3 {
+            font-family: 'Lora', serif;
+            font-size: 1.35rem;
+            color: var(--ouro-claro);
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        .oracao-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            max-width: 450px;
+            margin: 0 auto;
+        }
+        .oracao-list li {
+            font-size: 0.95rem;
+            color: var(--pergaminho);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+        .oracao-list li::before {
+            content: "✦";
+            color: var(--ouro);
+        }
+
+        /* ── WELCOME FOOTER ── */
+        .welcome-footer {
+            text-align: center;
+            margin-top: 40px;
+            font-family: 'Lora', serif;
+        }
+        .welcome-footer h4 {
+            font-size: 1.25rem;
+            color: var(--branco);
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        .welcome-footer p {
+            font-size: 1.05rem;
+            color: var(--ouro-claro);
+            font-style: italic;
+        }
+
+        /* ── FOOTER ── */
+        footer.main-footer {
+            text-align: center;
+            padding: 40px 20px;
+            background: #0d0703;
+            border-top: 1px solid rgba(255,255,255,0.03);
+            font-size: 0.75rem;
+            color: #665c52;
+            line-height: 1.8;
+            margin-top: 60px;
+        }
+        footer.main-footer p {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- ═══ HEADER SECTION ═══ -->
+        <header class="header-section">
+            <span class="success-icon">🎉</span>
+            <h1>PARABÉNS!</h1>
+            <h2>Sua compra foi concluída com sucesso.</h2>
+            <p>Que alegria ter você conosco nesta jornada de descoberta, crescimento espiritual e aprofundamento nas Escrituras.</p>
+        </header>
+
+        <!-- ═══ INFO BOX ═══ -->
+        <div class="info-box">
+            <p>
+                ✉️ Em instantes você receberá um e-mail com todas as informações de acesso.<br><br>
+                <strong>Importante:</strong> Caso não encontre o e-mail na caixa principal, verifique também as abas <em>Promoções</em>, <em>Atualizações</em> ou a pasta de <em>Spam</em>.
+            </p>
+        </div>
+
+        <div class="divisor">✦ ✦ ✦</div>
+
+        <!-- ═══ MESSAGE SECTION ═══ -->
+        <section class="text-content">
+            <h2 class="section-title">🙏 Uma mensagem para você</h2>
+            
+            <p>A decisão que você tomou hoje vai muito além da aquisição de um material.</p>
+            <p>É um passo em direção a um relacionamento mais profundo com a Palavra de Deus.</p>
+            
+            <blockquote>
+                "Lâmpada para os meus pés é a tua palavra e luz para o meu caminho."
+                <footer>Salmos 119:105</footer>
+            </blockquote>
+
+            <p>Mesmo que sua caminhada esteja apenas começando, continue avançando um passo de cada vez.</p>
+            
+            <p>O conhecimento cresce. A fé amadurece. E Deus honra aqueles que O buscam de todo o coração.</p>
+
+            <blockquote>
+                "Buscar-me-eis e me achareis quando me buscardes de todo o vosso coração."
+                <footer>Jeremias 29:13</footer>
+            </blockquote>
+
+            <p>Não se preocupe em aprender tudo de uma vez. A constância vale mais do que a velocidade.</p>
+            
+            <p>Reserve alguns minutos por dia. Leia. Reflita. Ore. Permita que a Palavra transforme sua mente e fortaleça sua fé.</p>
+
+            <blockquote>
+                "Antes, crescei na graça e no conhecimento de nosso Senhor e Salvador Jesus Cristo."
+                <footer>2 Pedro 3:18</footer>
+            </blockquote>
+        </section>
+
+        <!-- ═══ ORAÇÃO BOX ═══ -->
+        <section class="oracao-box">
+            <h3>✨ Nossa oração por você</h3>
+            <ul class="oracao-list">
+                <li>Que Deus ilumine seu entendimento.</li>
+                <li>Que as Escrituras se tornem cada vez mais claras.</li>
+                <li>Que sua fé seja fortalecida.</li>
+                <li>Que você encontre direção, paz e esperança em cada etapa desta jornada.</li>
+            </ul>
+        </section>
+
+        <!-- ═══ WELCOME FOOTER ═══ -->
+        <div class="welcome-footer">
+            <h4>Seja muito bem-vindo.</h4>
+            <p>Sua jornada está apenas começando.</p>
+        </div>
+
+    </div>
+
+    <!-- ═══ FOOTER ═══ -->
+    <footer class="main-footer">
+        <p>
+            Copyright © 2026 | Conexões da Bíblia | Todos os direitos reservados.<br>
+            Este site não é afiliado ao Facebook™, Instagram™ ou qualquer outra plataforma.<br>
+            Material digital para uso pessoal. Proibida a reprodução comercial sem autorização.
+        </p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🚨 Oferta Especial — Última Chamada</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon-copiar-150x150.webp" sizes="32x32">
+    <link rel="icon" href="images/favicon-copiar-300x300.webp" sizes="192x192">
+    <link rel="apple-touch-icon" href="images/favicon-copiar-300x300.webp">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --ouro: #C49A28;
+            --ouro-claro: #E8C84A;
+            --marrom: #3D2B1A;
+            --marrom-escuro: #1a0e06;
+            --marrom-medio: #6B4226;
+            --pergaminho: #F5EDD5;
+            --pergaminho-escuro: #E8D8A8;
+            --terracota: #C4714A;
+            --verde: #2E7D32;
+            --verde-btn: #388E3C;
+            --verde-btn-hover: #2E7D32;
+            --vermelho-preco: #C62828;
+            --vermelho: #8B1A1A;
+            --branco: #FDFAF4;
+            --texto-claro: #FDFAF4;
+            --texto-escuro: #2C1A0E;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: var(--marrom-escuro);
+            color: var(--texto-claro);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        /* ── TOP WARNING BAR ── */
+        .top-bar {
+            background: var(--vermelho);
+            color: var(--branco);
+            text-align: center;
+            padding: 15px 10px;
+            border-bottom: 2px solid var(--ouro);
+        }
+        .top-bar h1 {
+            font-size: 1.2rem;
+            margin-bottom: 4px;
+            text-transform: uppercase;
+            color: #fff;
+            letter-spacing: 1px;
+            font-weight: 900;
+        }
+        .top-bar p {
+            font-size: 0.9rem;
+            color: var(--ouro-claro);
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+
+        /* ── CONTAINER ── */
+        .container {
+            max-width: 650px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* ── HERO SECTION ── */
+        .hero {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+        .hero h2 {
+            font-family: 'Lora', serif;
+            font-size: 1.6rem;
+            color: var(--branco);
+            line-height: 1.4;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        .hero h2 span {
+            color: var(--ouro-claro);
+        }
+        .hero-sub {
+            font-size: 1.1rem;
+            color: var(--pergaminho);
+            font-family: 'Lora', serif;
+            max-width: 550px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        /* ── QUOTE BOX ── */
+        .quote-box {
+            background: rgba(196, 154, 40, 0.05);
+            border: 1px solid rgba(196, 154, 40, 0.2);
+            border-radius: 8px;
+            padding: 28px 24px;
+            margin-bottom: 40px;
+            position: relative;
+            text-align: center;
+        }
+        .quote-box h3 {
+            font-family: 'Lora', serif;
+            font-size: 1.35rem;
+            color: var(--ouro-claro);
+            margin-bottom: 15px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .quote-box p {
+            font-family: 'Lora', serif;
+            font-size: 1.1rem;
+            color: var(--pergaminho-escuro);
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+        .quote-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* ── INTRODUCTION TEXT ── */
+        .intro-section {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .intro-title {
+            font-size: 1.15rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--ouro);
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+        .intro-product {
+            font-family: 'Lora', serif;
+            font-size: 2rem;
+            color: var(--ouro-claro);
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        .intro-text {
+            font-size: 1rem;
+            color: #d1c7b7;
+            margin-bottom: 15px;
+            line-height: 1.7;
+        }
+
+        /* ── MOCKUP AREA (Tablet mockup with Discount Overlay) ── */
+        .mockup-title {
+            text-align: center;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #887a68;
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+        .mockup-container {
+            width: 100%;
+            max-width: 480px;
+            margin: 0 auto 45px auto;
+            background: linear-gradient(135deg, rgba(255,255,255,0.01) 0%, rgba(255,255,255,0.03) 100%);
+            border: 4px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 12px;
+            box-shadow: 0 25px 60px rgba(0,0,0,0.6);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        /* Gold discount tag overlay */
+        .discount-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: var(--ouro);
+            color: #000;
+            padding: 6px 12px;
+            font-size: 0.8rem;
+            font-weight: 900;
+            border-radius: 4px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            z-index: 10;
+            animation: bounce 2s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+        }
+
+        .mockup-container::before {
+            content: '';
+            position: absolute;
+            top: 0; left: -100%;
+            width: 40%; height: 100%;
+            background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.05), transparent);
+            transform: skewX(-25deg);
+            animation: shine 5s infinite;
+        }
+        @keyframes shine {
+            0% { left: -100%; }
+            40% { left: 140%; }
+            100% { left: 140%; }
+        }
+        
+        /* CSS Tablet Screen design representing an E-book or premium guide cover */
+        .tablet-screen {
+            width: 100%;
+            aspect-ratio: 1.4;
+            background: #150d06;
+            border-radius: 12px;
+            border: 1px solid rgba(196, 154, 40, 0.15);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 24px;
+            position: relative;
+            background-image: radial-gradient(circle at top right, rgba(196, 154, 40, 0.1), transparent);
+        }
+        .tablet-badge {
+            align-self: flex-start;
+            font-size: 0.75rem;
+            color: var(--ouro-claro);
+            border: 1px solid var(--ouro);
+            padding: 3px 8px;
+            border-radius: 20px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            background: rgba(196, 154, 40, 0.05);
+        }
+        .tablet-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-top: 15px;
+        }
+        .tablet-title {
+            font-family: 'Lora', serif;
+            font-size: 1.6rem;
+            color: var(--branco);
+            line-height: 1.3;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+        .tablet-subtitle {
+            font-size: 0.85rem;
+            color: var(--pergaminho-escuro);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .tablet-footer {
+            border-top: 1px solid rgba(255,255,255,0.06);
+            padding-top: 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.75rem;
+            color: #887a68;
+        }
+        .tablet-author {
+            font-weight: bold;
+            color: var(--ouro);
+        }
+
+        /* ── BENEFITS SECTION ── */
+        .benefits-section {
+            margin-bottom: 45px;
+        }
+        .benefits-title-box {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        .benefits-label {
+            font-size: 1.15rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--ouro);
+            font-weight: 800;
+            margin-bottom: 6px;
+        }
+        .benefits-list {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        .benefit-item {
+            display: flex;
+            gap: 16px;
+            background: rgba(255,255,255,0.01);
+            border: 1px solid rgba(255,255,255,0.03);
+            padding: 20px;
+            border-radius: 8px;
+            align-items: center;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+        .benefit-item:hover {
+            transform: translateY(-2px);
+            border-color: rgba(196, 154, 40, 0.2);
+            background: rgba(255,255,255,0.02);
+        }
+        .benefit-icon {
+            font-size: 1.4rem;
+            line-height: 1;
+            color: var(--ouro-claro);
+        }
+        .benefit-content p {
+            font-size: 1rem;
+            color: var(--pergaminho);
+            font-weight: 600;
+        }
+
+        /* ── OFERTA EXCLUSIVA WARNING ── */
+        .oferta-exclusiva {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+        .oferta-exclusiva h2 {
+            font-size: 1.15rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--ouro);
+            font-weight: 800;
+            margin-bottom: 8px;
+        }
+        .oferta-exclusiva p {
+            font-size: 0.95rem;
+            color: #d4af37;
+            font-style: italic;
+            font-family: 'Lora', serif;
+        }
+
+        /* ── WARNING BLOCK ── */
+        .warning-block {
+            background: rgba(139, 26, 26, 0.08);
+            border: 1px solid rgba(139, 26, 26, 0.3);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        .warning-block h4 {
+            color: #ff6666;
+            font-size: 1rem;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            letter-spacing: 1px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+        .warning-block p {
+            font-size: 0.95rem;
+            color: var(--pergaminho);
+            line-height: 1.5;
+        }
+
+        /* ── VALUE & PRICE SECTION ── */
+        .price-section {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 30px;
+            background: linear-gradient(180deg, rgba(61, 43, 26, 0.3) 0%, rgba(26, 14, 6, 0.3) 100%);
+            border-radius: 10px;
+            border: 1px solid rgba(196, 154, 40, 0.15);
+        }
+        .price-de {
+            font-size: 1.1rem;
+            color: #887a68;
+            text-decoration: line-through;
+            margin-bottom: 6px;
+        }
+        .price-por {
+            font-size: 1.1rem;
+            color: var(--ouro);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        .price-value {
+            font-family: 'Lora', serif;
+            font-size: 3.5rem;
+            color: var(--ouro-claro);
+            font-weight: bold;
+            line-height: 1.1;
+            margin-bottom: 15px;
+            text-shadow: 0 2px 10px rgba(196, 154, 40, 0.25);
+        }
+        .price-value span {
+            font-size: 1.5rem;
+            font-weight: normal;
+            vertical-align: middle;
+        }
+        .price-features {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            font-size: 0.85rem;
+            color: var(--pergaminho);
+            border-top: 1px solid rgba(255,255,255,0.06);
+            padding-top: 12px;
+            margin-top: 5px;
+        }
+        .price-feat-item {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+        .price-feat-item::before {
+            content: "✓";
+            color: var(--ouro-claro);
+            font-weight: bold;
+        }
+
+        /* ── ONE CLICK ACTION BOX ── */
+        .action-box {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+        
+        .btn-cta {
+            display: block;
+            width: 100%;
+            max-width: 500px;
+            margin: 0 auto 20px auto;
+            background: linear-gradient(180deg, #4CAF50 0%, #2E7D32 100%);
+            color: #ffffff;
+            font-size: 1.15rem;
+            font-weight: 800;
+            padding: 20px 24px;
+            border-radius: 50px;
+            text-decoration: none;
+            text-transform: uppercase;
+            box-shadow: 0 10px 25px rgba(46, 125, 50, 0.4);
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s;
+            letter-spacing: 0.5px;
+            position: relative;
+            overflow: hidden;
+        }
+        .btn-cta::after {
+            content: '';
+            position: absolute;
+            top: 0; left: -50%;
+            width: 20%; height: 100%;
+            background: linear-gradient(to right, transparent, rgba(255,255,255,0.3), transparent);
+            transform: skewX(-25deg);
+            animation: pulse-shine 3s infinite;
+        }
+        @keyframes pulse-shine {
+            0% { left: -50%; }
+            30% { left: 130%; }
+            100% { left: 130%; }
+        }
+        .btn-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 30px rgba(46, 125, 50, 0.5);
+            background: linear-gradient(180deg, #66BB6A 0%, #388E3C 100%);
+        }
+        .btn-cta:active {
+            transform: translateY(1px);
+        }
+
+        .decline-link {
+            display: inline-block;
+            color: #887a68;
+            font-size: 0.85rem;
+            text-decoration: underline;
+            transition: color 0.2s;
+            cursor: pointer;
+            line-height: 1.4;
+            max-width: 480px;
+            margin: 0 auto;
+        }
+        .decline-link:hover {
+            color: #bfaea2;
+        }
+
+        /* ── GUARANTEE BADGE ── */
+        .guarantee-box {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 45px;
+        }
+        .guarantee-icon {
+            font-size: 2.2rem;
+            color: #42a5f5;
+            line-height: 1;
+        }
+        .guarantee-text h5 {
+            font-size: 0.95rem;
+            color: var(--branco);
+            font-weight: bold;
+            margin-bottom: 4px;
+        }
+        .guarantee-text p {
+            font-size: 0.85rem;
+            color: #a19789;
+            line-height: 1.4;
+        }
+
+        /* ── FOOTER ── */
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            background: #0d0703;
+            border-top: 1px solid rgba(255,255,255,0.03);
+            font-size: 0.75rem;
+            color: #665c52;
+            line-height: 1.8;
+        }
+        footer p {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ═══ TOP WARNING BAR ═══ -->
+    <div class="top-bar">
+        <h1>UMA ÚLTIMA OPORTUNIDADE:</h1>
+        <p>Antes de encerrar, quero fazer algo especial para você.</p>
+    </div>
+
+    <div class="container">
+
+        <!-- ═══ HERO SECTION ═══ -->
+        <section class="hero">
+            <p class="hero-sub" style="margin-bottom: 15px;">Talvez este não seja o momento ideal para investir no Plano Devocional completo.</p>
+            <p class="hero-sub" style="margin-bottom: 30px;">E tudo bem.</p>
+            <h2>
+                Mas eu realmente acredito que estes próximos 7 dias podem fazer diferença na sua caminhada espiritual.<br>
+                <span>Por isso, decidi liberar uma condição especial antes que você saia desta página.</span>
+            </h2>
+        </section>
+
+        <!-- ═══ QUOTE BOX ═══ -->
+        <div class="quote-box">
+            <h3>Última oportunidade</h3>
+            <p>O mesmo Plano Devocional 7 Dias.</p>
+            <p>Os mesmos áudios.</p>
+            <p>As mesmas reflexões.</p>
+            <p>Os mesmos exercícios espirituais.</p>
+            <p><strong>Mas com um valor reduzido disponível apenas agora.</strong></p>
+        </div>
+
+        <!-- ═══ INTRODUCTION ═══ -->
+        <section class="intro-section">
+            <h3 class="intro-title">Condição Especial</h3>
+            <div class="intro-product">🙏 Plano Devocional 7 Dias</div>
+        </section>
+
+
+
+        <!-- ═══ BENEFITS ═══ -->
+        <section class="benefits-section">
+            <div class="benefits-title-box">
+                <h2 class="benefits-label">Você continuará recebendo:</h2>
+            </div>
+            
+            <div class="benefits-list">
+                <!-- Benefit 1 -->
+                <div class="benefit-item">
+                    <div class="benefit-icon">✅</div>
+                    <div class="benefit-content">
+                        <p>Os 7 áudios guiados</p>
+                    </div>
+                </div>
+
+                <!-- Benefit 2 -->
+                <div class="benefit-item">
+                    <div class="benefit-icon">✅</div>
+                    <div class="benefit-content">
+                        <p>Reflexões diárias</p>
+                    </div>
+                </div>
+
+                <!-- Benefit 3 -->
+                <div class="benefit-item">
+                    <div class="benefit-icon">✅</div>
+                    <div class="benefit-content">
+                        <p>Momentos de oração</p>
+                    </div>
+                </div>
+
+                <!-- Benefit 4 -->
+                <div class="benefit-item">
+                    <div class="benefit-icon">✅</div>
+                    <div class="benefit-content">
+                        <p>Fortalecimento espiritual</p>
+                    </div>
+                </div>
+
+                <!-- Benefit 5 -->
+                <div class="benefit-item">
+                    <div class="benefit-icon">✅</div>
+                    <div class="benefit-content">
+                        <p>Aplicação prática da Palavra</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══ OFERTA EXCLUSIVA WARNING ═══ -->
+        <section class="oferta-exclusiva">
+            <h2>Oferta Final</h2>
+        </section>
+
+        <!-- ═══ VALUE & PRICE SECTION ── -->
+        <section class="price-section">
+            <div class="price-de">De R$37</div>
+            <div class="price-por">por apenas</div>
+            <div class="price-value">
+                <span>R$</span> 12,90
+            </div>
+            <div class="price-features">
+                <div class="price-feat-item">Pagamento único</div>
+                <div class="price-feat-item">Acesso imediato</div>
+            </div>
+        </section>
+
+        <!-- ═══ WARNING BLOCK ── -->
+        <div class="warning-block">
+            <h4>⚠️ Atenção</h4>
+            <p>Esta é a última oferta disponível nesta página. Ao sair, ela desaparecerá definitivamente.</p>
+        </div>
+
+        <!-- ═══ ONE CLICK ACTION BOX ── -->
+        <section class="action-box">
+            <!-- CTA Button -->
+            <!-- Replace the href with your Lastlink/Hotmart one-click upsell token/url -->
+            <a href="https://lastlink.com/p/CC6FF6E5B/checkout-payment/" class="btn-cta">👉 SIM! QUERO APROVEITAR ESTA CONDIÇÃO ESPECIAL</a>
+            
+            <br>
+            
+            <!-- Decline Link -->
+            <!-- Replace the href with your thank-you page url to decline and go to thank you page -->
+            <a href="upsell3.html" class="decline-link">
+                Não, obrigado. Quero recusar esta oferta e finalizar minha compra apenas com os itens anteriores.
+            </a>
+        </section>
+
+        <!-- ═══ GUARANTEE ═══ -->
+        <div class="guarantee-box">
+            <div class="guarantee-icon">🛡️</div>
+            <div class="guarantee-text">
+                <h5>Garantia de 7 dias</h5>
+                <p>Seu investimento está 100% protegido. Se você não sentir que o Plano Devocional complementou sua caminhada, devolvemos seu dinheiro integralmente.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- ═══ FOOTER ═══ -->
+    <footer>
+        <p>
+            Copyright © 2026 | Conexões da Bíblia | Todos os direitos reservados.<br>
+            Este site não é afiliado ao Facebook™, Instagram™ ou qualquer outra plataforma.<br>
+            Material digital para uso pessoal. Proibida a reprodução comercial sem autorização.
+        </p>
+    </footer>
+
+</body>
+</html>
